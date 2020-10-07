@@ -1,0 +1,26 @@
+div.content {
+  grid-area: "Content";
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+div.content .main-content-div {
+  padding: 5% 10%;
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+div.content .main-content-div h3 {
+  text-transform: uppercase;
+}
+
+div.content .main-content-div p {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+}

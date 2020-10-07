@@ -1,0 +1,75 @@
+header.menubar {
+  width: 100%;
+  grid-area: "Header";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+header.menubar div.menu-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+header.menubar div.menu-content .div-logo {
+  width: 40%;
+}
+
+header.menubar div.menu-content nav {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+header.menubar div.menu-content nav a {
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+header.menubar div.menu-content nav a:hover {
+  color: rgba(255, 255, 255, 0.808);
+}
+
+header.menubar div.menu-content nav a.active {
+  color: rgb(190, 255, 206);
+  position: relative;
+  transition: 5s;
+}
+
+header.menubar div.menu-content nav a.active::after {
+  transition: 5s;
+  position: absolute;
+  content: '';
+  /* width: 100%; */
+  height: 1px;
+  background-color: rgb(190, 255, 206);
+  left: 0;
+  top: 100%;
+  animation-name: link-animation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  width: 100%;
+}
+
+@keyframes link-animation {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+header.menubar div.menu-content nav a {
+  text-decoration: none;
+}
